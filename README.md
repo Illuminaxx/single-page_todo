@@ -1,4 +1,4 @@
-# single-page_todo
+# single-page-todo
 
 Todo List sur une seule page, faites en nodeJS et Angular
 
