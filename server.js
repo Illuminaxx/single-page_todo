@@ -27,6 +27,7 @@
   // routes ======================================================================
 
   // api ---------------------------------------------------------------------
+
   // get all todos
   app.get('/api/todos', function(req, res) {
 
@@ -35,13 +36,13 @@
 
           // if there is an error retrieving, send the error. nothing after res.send(err) will execute
           if (err)
-              res.send(err)
+              res.send(err);
 
           res.json(todos); // return all todos in JSON format
       });
   });
 
-  // create todo and send back all todos after creation
+  /* create todo and send back all todos after creation */
   app.post('/api/todos', function(req, res) {
 
       // create a todo, information comes from AJAX request from Angular
@@ -55,7 +56,7 @@
           // get and return all the todos after you create another
           Todo.find(function(err, todos) {
               if (err)
-                  res.send(err)
+                  res.send(err);
               res.json(todos);
           });
       });
@@ -73,7 +74,7 @@
           // get and return all the todos after you create another
           Todo.find(function(err, todos) {
               if (err)
-                  res.send(err)
+                  res.send(err);
               res.json(todos);
           });
       });
